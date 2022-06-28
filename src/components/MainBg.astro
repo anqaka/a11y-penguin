@@ -1,0 +1,95 @@
+<div class="main-gradient">
+  <slot />
+</div>
+<style>
+  @property --angle1 {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 90deg;
+  }
+  @property --angle2 {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 60deg;
+  }
+  @property --angle3 {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 200deg;
+  }
+  @property --color1 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #38bdf8;
+  }
+  @property --color2 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #ec4899;
+  }
+  @property --color3 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #c084fc;
+  }
+  @property --color4 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #bef264;
+  }
+
+  .main-gradient {
+    --angle1: 20deg;
+    --angle2: 360deg;
+    --angle3: 110deg;
+    --color1: #38bdf8;
+    --color2: #ec4899;
+    --color3: #c084fc;
+    --color4: #bef264;
+    --color5: #5838f8;
+    --color6: #cc06b5;
+    background: linear-gradient(var(--angle1), var(--color1), var(--color2)),
+    linear-gradient(var(--angle2),var(--color3), var(--color4)),
+    linear-gradient(var(--angle3),var(--color5), var(--color5));
+    /* background-size: 100% 100%; */
+    animation: gradient 1.5s ease infinite;
+  }
+
+  @keyframes gradient {
+    from {
+      --angle1: 20deg;
+      --angle2: 360deg;
+      --angle3: 110deg;
+      --color1: #38bdf8;
+      --color2: #ec4899;
+      --color3: #c084fc;
+      --color4: #bef264;
+      --color5: #5838f8;
+      --color6: #cc06b5;
+    }
+
+    50% {
+      --angle1: 217deg;
+      --angle2: 30deg;
+      --angle3: 110deg;
+      --color1: #cc06b5;
+      --color2: #38bdf8;
+      --color3: #bef264;
+      --color4: #c084fc;
+      --color5: #5838f8;
+      --color6: #ec4899;
+    }
+
+    to {
+      --angle1: 60deg;
+      --angle2: 170deg;
+      --angle3: 10deg;
+      --color5: #38bdf8;
+      --color6: #ec4899;
+      --color1: #c084fc;
+      --color4: #bef264;
+      --color2: #5838f8;
+      --color3: #cc06b5;
+    }
+  }
+</style>

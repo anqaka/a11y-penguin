@@ -1,0 +1,34 @@
+<div class="floating-penguin">
+  <img src="images/penguin-small-opt.png">
+</div>
+<style>
+.floating-penguin {
+  position: absolute;
+  animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s ease 0s infinite alternate;
+}
+
+
+@keyframes moveX {
+  from {
+    left: 0;
+  }
+  50% {
+    left: 80%
+  }
+  to {
+    left: -20%;
+  }
+}
+
+@keyframes moveY {
+  from {
+    top: 0;
+  }
+  50% {
+    top: 90%;
+  }
+  to {
+    top: 30%;
+  }
+}
+</style>

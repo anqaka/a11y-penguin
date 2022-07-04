@@ -8,14 +8,15 @@ import Penguin from '../components/Penguin.astro'
 
 <Layout title="Penguin rules">
   <MainBg>
-    <main class="container mx-auto py-10 px-4 min-h-screen">
+    <header class="container mx-auto py-10 px-4">
       <h1 class="text-6xl text-primary text-center mb-6">
         Hello! I'm Penguin, Penguin The Brave<br>
         <span class="text-gradient">
           Let's have some fun!
         </span>
       </h1>
-
+    </header>
+    <main class="container mx-auto py-10 px-4">
       <Section
         title="I can\'t fly but I don\'t care"
         body="I can swim at speeds of up to 36km/h! That's 4 times faster than any Olympic swimmer! I can also dive deep - around 350m deep. I'm a master!!! My ancestors may have been approximately 2m tall and weighed over 100kg! Fossils found in Antarctica suggest there were once giant penguins roaming the earth around 37 million years ago. Imagine running into one of these guys on an Antarctica cruise."
@@ -30,7 +31,9 @@ import Penguin from '../components/Penguin.astro'
       />
       <AppForm client:visible />
     </main>
-    <Penguin />
+    <footer>
+      <Penguin />
+    </footer>
   </MainBg>
 </Layout>
 
